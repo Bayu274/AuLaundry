@@ -1,0 +1,93 @@
+aulaundry/
+├── 📁 config/
+│   ├── database.php          # Koneksi DB dengan PDO + .env
+│   ├── app.php               # Konstanta aplikasi
+│   └── session.php           # Session handler
+│
+├── 📁 includes/
+│   ├── header.php            # HTML head + CSS imports
+│   ├── sidebar_admin.php     # Sidebar admin (reusable)
+│   ├── sidebar_kurir.php     # Sidebar kurir
+│   ├── navbar_pelanggan.php  # Navbar pelanggan
+│   ├── footer.php            # Footer + JS imports
+│   ├── auth_guard.php        # Middleware autentikasi
+│   ├── csrf.php              # CSRF token generator/validator
+│   └── flash_message.php     # Notifikasi flash
+│
+├── 📁 classes/
+│   ├── Database.php          # PDO Singleton
+│   ├── Auth.php              # Login/logout/register handler
+│   ├── Pelanggan.php         # Model pelanggan
+│   ├── Pesanan.php           # Model pesanan
+│   ├── Kurir.php             # Model kurir
+│   ├── Admin.php             # Model admin
+│   ├── Karyawan.php          # Model karyawan
+│   └── Validator.php         # Input validation
+│
+├── 📁 actions/
+│   ├── auth/
+│   │   ├── login.php         # Universal login handler
+│   │   ├── logout.php        # Universal logout
+│   │   └── register.php      # Registrasi pelanggan
+│   ├── pelanggan/
+│   │   ├── create.php
+│   │   ├── update.php
+│   │   └── delete.php
+│   ├── pesanan/
+│   │   ├── create.php
+│   │   ├── update.php
+│   │   └── delete.php
+│   ├── kurir/
+│   │   ├── create.php
+│   │   ├── update.php
+│   │   └── delete.php
+│   ├── admin/
+│   │   ├── create.php
+│   │   ├── update.php
+│   │   └── delete.php
+│   └── karyawan/
+│       ├── create.php
+│       ├── update.php
+│       └── delete.php
+│
+├── 📁 pages/
+│   ├── admin/
+│   │   ├── dashboard.php
+│   │   ├── data_pelanggan.php
+│   │   ├── data_pesanan.php
+│   │   ├── data_kurir.php
+│   │   ├── data_admin.php
+│   │   ├── data_karyawan.php
+│   │   ├── tambah_pelanggan.php
+│   │   ├── tambah_pesanan.php
+│   │   ├── tambah_kurir.php
+│   │   ├── tambah_karyawan.php
+│   │   └── edit_*.php
+│   ├── kurir/
+│   │   └── dashboard.php
+│   └── pelanggan/
+│       └── dashboard.php
+│
+├── 📁 public/
+│   ├── 📁 css/
+│   │   ├── main.css          # Global styles
+│   │   ├── sidebar.css       # Sidebar component
+│   │   ├── responsive.css    # Media queries
+│   │   └── auth.css          # Login pages styling
+│   ├── 📁 js/
+│   │   ├── app.js            # Main JS (sidebar toggle, etc)
+│   │   ├── form-validation.js
+│   │   └── notification.js
+│   └── 📁 img/
+│       └── logo.png
+│
+├── 📁 errors/
+│   ├── 404.php
+│   └── 500.php
+│
+├── .env                       # Environment variables (JANGAN commit!)
+├── .env.example               # Template env
+├── .htaccess                  # URL rewrite + security headers
+├── index.php                  # Entry point / router
+├── login.php                  # Halaman login universal
+└── README.md
